@@ -1,6 +1,6 @@
 {
   "name": "@sanv/tsconfig",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Shared TypeScript config for projects",
   "license": "MIT",
   "repository": "SanderV1992/tsconfig",
