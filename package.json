@@ -13,36 +13,34 @@
   },
   "homepage": "https://github.com/SanderV1992/tsconfig",
   "scripts": {
-    "commit": "npx git-cz"
+    "commit": "npx git-cz",
+    "prettier": "prettier --write \"./src/**/**.{ts,tsx,js,jsx,json}\""
   },
-  "files": [
-    "tsconfig.json"
-  ],
-  "keywords": [
-    "tsconfig",
-    "typescript",
-    "ts",
-    "config",
-    "configuration"
-  ],
+  "files": ["tsconfig.json"],
+  "keywords": ["tsconfig", "typescript", "ts", "config", "configuration"],
   "engines": {
     "node": ">=8"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
+    "@sanv/sharec-config": "1.0.3",
     "cz-conventional-changelog": "3.0.2",
-    "husky": "4.2.5"
+    "husky": "4.2.5",
+    "lint-staged": "10.2.2",
+    "prettier": "2.0.5",
+    "sharec": "2.1.2"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
   },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,mjs}": ["prettier --write", "git add"],
+    "{*.json,.huskyrc,.prettierrc,.lintstagedrc,.eslintrc}": [
+      "prettier --write --parser json",
+      "git add"
+    ]
   }
 }

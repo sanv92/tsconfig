@@ -130,5 +130,29 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows
+
+#####################################################################
+
+# Editors
 .vscode
 .idea
+
+# Storybook
+storybook-static
+
+# Distributable
+bundle-analyzer-stats.json
+
+# Version control
+.git
+.history
+
+.cache
+*.bundle.js
+*.js.map
+
+config
+coverage
+dist
+docker
+mock-server
