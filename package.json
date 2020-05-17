@@ -5,11 +5,15 @@
   "license": "MIT",
   "repository": "SanderV1992/tsconfig",
   "main": "tsconfig.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/SanderV1992/tsconfig/issues"
+  },
+  "homepage": "https://github.com/SanderV1992/tsconfig",
   "scripts": {
     "commit": "npx git-cz"
-  },
-  "engines": {
-    "node": ">=8"
   },
   "files": [
     "tsconfig.json"
@@ -21,6 +25,9 @@
     "config",
     "configuration"
   ],
+  "engines": {
+    "node": ">=8"
+  },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
